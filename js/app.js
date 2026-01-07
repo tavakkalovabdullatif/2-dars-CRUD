@@ -11,7 +11,6 @@ fetch("https://json-api.uz/api/project/fn44-amaliyot/cars")
 function ui(data) {
   const elTemplateCard = document.getElementById("templateCard");
   const elContainer = document.getElementById("container");
-  const elTemplateSkeleton = document.getElementById("templateSkeleton");
 
   data.forEach((element) => {
     const template = elTemplateCard.cloneNode(true).content;
@@ -28,3 +27,19 @@ function ui(data) {
     elContainer.appendChild(template);
   });
 }
+
+function loader(bool) {
+  const elLoader = document.getElementById("loader");
+  const elTemplateSkeleton = document.getElementById("templateSkeleton");
+
+  if (bool) {
+    elLoader.innerHTML = null;
+    Array.from({ length: 7 }, (_, index) => index).forEach(() => {
+      elLoader.appendChild(elTemplateSkeleton);
+    });
+  } else {
+    elLoader.innerHTML = null;
+  }
+}
+
+loader();

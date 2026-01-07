@@ -10,6 +10,9 @@
     <div
       class="ml-auto mr-auto max-w-7xl grid grid-cols-3 gap-5 pt-5"
       id="container"></div>
+    <div
+      class="ml-auto mr-auto max-w-7xl grid grid-cols-3 gap-5 pt-5"
+      id="loader"></div>
 
     <!-- templateCard -->
     <template id="templateCard"
@@ -42,25 +45,21 @@
           </div>
         </div></div
     ></template>
-
     <!-- templateCard  -->
-    <!-- <template id="templateSkeleton" -->
-
-    <div class="card bg-base-100 w-96 shadow-xl border-white">
-      <figure>
-        <div class="skeleton h-32 w-full"></div>
-      </figure>
-      <div class="card-body">
-        <div class="skeleton h-4 w-28"></div>
-        <div class="skeleton h-4 w-full"></div>
-        <div class="card-actions justify-end">
-          <button class="skeleton btn btn-error">
-            <div class="skeleton h-4 w-4"></div>
-          </button>
+    <template id="templateSkeleton">
+      <div class="card bg-base-100 w-96 shadow-xl border-white">
+        <figure>
+          <div class="skeleton h-60 w-full"></div>
+        </figure>
+        <div class="card-body">
+          <div class="skeleton h-4 w-28"></div>
+          <div class="skeleton h-4 w-full"></div>
+          <div class="card-actions justify-end">
+            <div class="skeleton h-9 w-9"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- </template> -->
+    </template>
 
     <script src="./js/app.js"></script>
   </body>
