@@ -12,6 +12,7 @@ function ui(data) {
   const elTemplateCard = document.getElementById("templateCard");
   const elContainer = document.getElementById("container");
   const elTemplateSkeleton = document.getElementById("templateSkeleton");
+
   data.forEach((element) => {
     const template = elTemplateCard.cloneNode(true).content;
     template.querySelector("h2").innerText = element.name
@@ -27,7 +28,3 @@ function ui(data) {
     elContainer.appendChild(template);
   });
 }
-
-const bir = document.getElementById("1");
-
-console.log(bir);
