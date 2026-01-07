@@ -42,4 +42,4 @@ function loader(bool) {
   }
 }
 
-loader();
+loader(true);
